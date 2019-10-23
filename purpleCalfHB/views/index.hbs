@@ -1,0 +1,40 @@
+{{>header}}
+<h1>index page</h1>
+<!-- {{result}} -->
+<div>
+    <form class="horizontal-form" method="post" action="/submit">
+        <!--id-->
+        <div class="form-group">
+            <label for="id">ID</label>
+        </div>
+        <!--name-->
+        <div class="form-group">
+            <label for="name">Name</label>
+        <div>
+            <input id="name" name="name" type="text" placeholder="Enter name:">
+        </div>
+        </div>
+        <!--now save-->
+        <button type="submit">Save</button>
+    </form>
+</div>
+<fieldset>
+    <legend>All Categories</legend>
+<table>
+    <thead>
+        <th>ID</th>
+        <th>Name</th>
+    </thead>
+
+<tbody>
+    {{#each result}}
+    <tr>
+        <td>{{this.id}}</td>
+        <td>{{this.name}}</td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+</fieldset>
+
+{{>footer}}

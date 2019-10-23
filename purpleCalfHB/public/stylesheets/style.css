@@ -1,0 +1,815 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 24-May-2019, 08:31:30
+    Author     : atjkm
+*/
+*{
+    text-decoration: none;
+    outline: none;
+}
+html{
+    background-color: white;
+    overflow-x: hidden;
+}
+#content{
+    background: rgba(255,255,255,0.1);
+    /*background-color: rgba(255, 255, 255, 0.3);*/
+    font-family: "Arial", serif;
+    /*overflow-x: hidden;*/
+    width:80%;
+    margin-left: 100px;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+#page{
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+#header{
+    top: 20px;
+    height: 0;
+    background-color: red;
+    /*position: fixed;*/
+}
+
+/*design for top nav bar*/
+.topBar{
+    background-color: #20b4fb;
+    overflow: hidden;
+    position: fixed;
+    top: 0px;
+    left: 0;
+    z-index: 1;
+    width: 100%; 
+    height: 60px;
+}
+
+.open{
+    left: 30px; 
+    height: 45px;
+    width: 70px;
+}
+
+.open span{
+    position: relative;
+    top:10px;
+    left: 30px;
+    display:block;
+    background: #ffffff;
+    width:30px;
+    height:5px;
+    margin:5px 0px;
+    cursor:pointer;
+    transition:transform 300ms ease 200ms;
+}
+
+.topBar ul{
+    padding: 5px 0 0 0;
+    list-style: none;
+}
+
+.logo{
+    border: red;
+    top: 10px;
+    margin-left: 80px;  
+    position: fixed;
+}
+
+.navbar-nav{
+    width: 100%;
+    position: absolute;
+    margin-left: 300px;
+    top: -10px;
+}
+
+.navbar-nav li a{
+    float: left;
+    display: block;
+    padding: 10px 15px 15px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+}
+
+.navbar-nav a:hover{
+    background-color: #990099; 
+    color: orangered;
+}
+/*end of css for top nav bar*/
+
+/*css for side nav*/
+.close{ 
+    left: 30px; 
+    height: 45px;
+    border-radius: 105px;
+    background-color: rgba(34, 65, 93, 0.9);
+}
+.close span{
+    position: relative;
+    top:10px;
+    left: 30px;
+    display:block;
+    background: #fff;
+    width:30px;
+    height:5px;
+    margin:5px 0px;
+    cursor:pointer;
+    transition:transform 300ms ease 200ms;}
+.nav{
+    background-color: rgba(34, 65, 93, 0.9); 
+    width: 0;
+    height: 100vh;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    transition: 0.5s;
+    display: block;
+    text-align: left;
+    opacity: 0.9;
+    overflow-x: hidden;
+}
+.userImg{
+    padding: 20px 0 0 20px;
+}
+.nav a{
+    clear: left;
+    color: #fff;
+    font-size: 20px;
+    display: block;
+    text-decoration: none;
+    padding: 6px 8px 6px 16px;;
+    transition: 0.3s;
+}
+
+.nav a:hover{
+    background-color: #fff;  
+    color: orangered;
+}
+/*end of css for side nav*/
+.indexTittle{
+    font-size: large;
+}
+
+/*video css*/
+video{
+    width: 100%;
+    height: 200px;
+}
+/*end of video css*/
+
+/*carousel css*/
+.carouselIndex{
+    height: 200px;
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+    border: none;
+    top: 10px;
+    background-color: white;
+}
+
+/*images should not expand past the browser viewport*/
+.mySlides{
+    height: 100%;
+    width: 100%;
+    max-height: 100%;
+    max-width: 100%;
+}
+/*end of carousel css*/
+.arrangeBoxes{
+    margin:0 auto;
+    padding:20px 0 10px 0;
+    width:100%;
+    align-items: flex-end;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+
+.leftIndex{
+    background-color: #00ff99;
+    height: 300px;
+    margin: 10px;
+    width: 300px;
+    float: left;
+    padding: 0 0 10px 0;
+}
+
+.centerIndex{
+    display: inline-block;
+    background-color: #ff6600;
+    height: 300px;
+    margin: 10px;
+    width: 200px;
+}
+.centerIndex ul{
+    padding: 0;
+    margin: 0;;
+    background-color: #ff6600;
+    list-style-type: none;
+}
+.centerIndex ul li{
+    background-repeat: repeat;
+    padding-left: 0;
+    text-align: left;
+}
+.ourProductsTitle{
+    font-size: 20px;
+}
+.rightIndex{
+    display: inline-block;
+    background-color: #ffffff;
+    height: 300px;
+    margin: 10px;
+    width: 200px;
+    float: right;
+}
+.preformattedLeft{
+    text-align: justify;
+    padding-left: 0;
+    padding-right: 10px;
+}
+.preformatted{
+    text-align: justify;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.articleRight{
+    position: relative;
+    background: yellow;
+
+}
+.noteBetter{
+    text-align: justify;
+    color: red;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ribbon{
+    --p: 15px;
+    background-color: #20b4fb;
+    height: 60px;
+    top: -20px;
+    padding: 5px var(--p);
+    position: relative;
+    right: var(--p);
+    width: 200px;
+    text-align: center;
+}
+
+.ribbon:before,
+.ribbon:after {
+    background-color: #000000;
+    content:'';
+    display: block;
+    filter: brightness(.5);
+    height: 100%;
+    position: absolute;
+    top: calc(var(--p)/2);
+    width: var(--p);
+    z-index: -1;
+}
+
+.ribbon:before {
+    left: 0;
+    transform:skewy(45deg);
+}
+.ribbon:after {
+    right: 0;
+    transform:skewy(-45deg);
+}
+
+.ribbon h2{
+    color: white;
+}
+
+/*left ribbon*/
+.ribbonLeftIndex{
+    --p: 15px;
+    background-color: #20b4fb;
+    height: 80px;
+    top: -20px;
+    padding: 5px var(--p);
+    position: relative;
+    right: var(--p);
+    width: 300px;
+    text-align: center;
+}
+
+.ribbonLeftIndex:before,
+.ribbonLeftIndex:after {
+    background-color: #000000;
+    content:'';
+    display: block;
+    filter: brightness(.5);
+    height: 100%;
+    position: absolute;
+    top: calc(var(--p)/2);
+    width: var(--p);
+    z-index: -1;
+}
+
+.ribbonLeftIndex:before {
+    left: 0;
+    transform:skewy(45deg);
+}
+.ribbonLeftIndex:after {
+    right: 0;
+    transform:skewy(-45deg);
+}
+
+.ribbonLeftIndex h2{
+    color: white;
+    align-items:  flex-end;
+}
+/*end of left ribbon*/
+
+/*centre ribbon*/
+.ribbonCenterInde{
+    --p: 15px;
+    background-color: #20b4fb;
+    height: 60px;
+    top: -20px;
+    padding: 5px var(--p);
+    position: relative;
+    right: var(--p);
+    width: 200px;
+    text-align: center;
+}
+
+.ribbonCenterIndex:before,
+.ribbonCenterIndex:after {
+    background-color: #000000;
+    content:'';
+    display: block;
+    filter: brightness(.5);
+    height: 100%;
+    position: absolute;
+    top: calc(var(--p)/2);
+    width: var(--p);
+    z-index: -1;
+}
+
+/*.ribbonCenterIndex:before {
+    left: 0;
+    transform:skewy(45deg);
+}*/
+.ribbonCenterIndex:after {
+    right: 0;
+    transform:skewy(-45deg);
+}
+
+.ribbonCenterIndex h2{
+    color: white;
+    align-items:  flex-start;
+}
+/*end of centre ribbon*/
+
+/*footer css*/
+#footer{
+    background-color: yellow;
+    bottom: 0;
+    height: 300px;;
+    width: 100%;
+    left: 0;
+    padding: 0 0 0 0
+}
+
+.footer-main-div{
+    width: 100%;
+    height: 500px;
+    background: #272727;
+}
+.footer-social-icons{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+.footer-social-icons ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.footer-social-icons ul li{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    border-radius: 100%;
+}
+.faceBookSm{
+    background: #3B5998;
+}
+.twitterSm{
+    background: #55ACEE;
+}
+.googleSm{
+    background: #dd4b39;
+}
+.linkedInSm{
+    background: #007bb5;
+}
+
+/*.footer-social-icons ul li a{
+    color: #00aced;
+    font-size: 25px;
+    display: block;
+}*/
+
+.footer-social-icons ul li a i{
+    line-height: 50px;
+    color: #fff;
+}
+
+.footer-menu-one{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+}
+/**/
+.footer-menu-three{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 100px;
+    text-align: center;
+}
+.footer-menu-three p{
+    font-family: arial;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    /*text-transform: uppercase;*/
+}
+.footer-menu-three a{
+    font-family: arial;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.footer-menu-three a:hover{
+    color: blue;
+}
+
+.footer-menu-one ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.footer-menu-one ul li{
+    display: inline-block;
+    margin: 0 20px;
+}
+.footer-menu-one ul li a{
+    font-family: arial;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.footer-menu-one ul li a:hover{
+    color: #990099;
+}
+/*two*/
+
+.footer-menu-two{
+    width: 100%;
+    height: auto;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.footer-menu-two ul{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.footer-menu-two ul li{
+    display: inline-block;
+    margin: 0 15px;
+}
+.footer-menu-two ul li a{
+    font-family: arial;
+    font-size: 10px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.footer-menu-two ul li a:hover{
+    color: #990099;
+}
+/*align text at the centre of the div vertically and horizontally*/
+.copyright{
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    text-align: center;
+    border: none;
+    background-color: rgba(34, 65, 93, 0.9);
+}
+/*end of footer css*/
+
+/*add overlay to allow side menue closing on clicking anywhere on the screen*/
+.OverlayDiv{
+    position:fixed;
+    display:none;
+    width:100%;
+    height:100%;
+    top:0;
+    left:200px;
+    right:0;
+    bottom:0;
+    background-color:rgba(255,255,255,0.5);
+    z-index:2
+}
+
+.overlay-animate-opacity{
+    animation:opac 0.8s}@keyframes opac{from{opacity:0} to{opacity:1}
+}
+/*end of overlay css*/
+
+/*design for contact us form*/
+.contactUs{
+    background: #0b3d78;
+    margin: 0px;
+    height: max-content;
+    width: max-content;
+}
+.contactUsForm{
+    width: fit-content;
+}
+.contactUsPnl{
+    background: #20b4fb;
+}
+.contactUsForm .contactUsPnl .email{
+    background: #ffffff;
+    width: 200px;
+}
+.contactUsForm .contactUsPnl .subject{
+    background: #ffffff;
+    width: 200px;
+}
+.contactUsForm .contactUsPnl .message{
+    background: #ffffff;
+    width: 200px;
+}
+/*end of design for contact us form*/
+
+/*css for contact form on contact page before small screen*/
+.rightContactCPage{
+    display: inline-block;
+    background-color: #ffffff;
+    height: 300px;
+    margin: 10px;
+    width: 420px;
+    float: none;
+}
+.contactRibbonCPage{
+    --p: 15px;
+    background-color: #20b4fb;
+    height: 60px;
+    top: -20px;
+    padding: 5px var(--p);
+    position: relative;
+    right: var(--p);
+    width: 420px;
+    text-align: center;
+}
+.contactRibbonCPage:before,
+.contactRibbonCPage:after{
+    background-color: #000000;
+    content:'';
+    display: block;
+    filter: brightness(.5);
+    height: 100%;
+    position: absolute;
+    top: calc(var(--p)/2);
+    width: var(--p);
+    z-index: -1;
+}
+.contactRibbonCPage:before {
+    left: 0;
+    transform:skewy(45deg);
+}
+.contactRibbonCPage:after {
+    right: 0;
+    transform:skewy(-45deg);
+}
+
+.contactRibbonCPage h2{
+    color: white;
+}
+
+.contactUsCPage{
+    display: flex;
+        height: max-content;
+        width: 100%;
+        margin-left: 0px;
+}
+.contactUsFormCPage{
+    flex: 1;
+}
+.contactUsPnlCPage{
+    background: #20b4fb;
+}
+.contactUsFormCPage .contactUsPnlCPage .email{
+    background: #ffffff;
+    width: 400px;
+}
+.contactUsFormCPage .contactUsPnlCPage .subject{
+    background: #ffffff;
+    width: 400px;
+}
+.contactUsFormCPage .contactUsPnlCPage .message{
+    background: #ffffff;
+    width: 400px;
+}
+/*end of css for contact form on contact page*/
+
+.divAboveFooter{
+    height: 50px;
+}
+/*Cookie Consent css*/
+.cookieConsentContainer {
+    z-index: 999;
+    width: 100%;
+    min-height: 20px;
+    box-sizing: border-box;
+    padding: 30px 0px 30px 60px;
+    background: rgba(0, 0, 0,0.5);
+    overflow: hidden;
+    position: fixed;
+    bottom: 0px;
+    right: 30px;
+    display: none;
+    text-align: center;
+}
+.cookieConsentContainer .cookieTitle a {
+    font-family: OpenSans, arial, "sans-serif";
+    color: #fff;
+    font-size: 22px;
+    line-height: 20px;
+    display: block;
+}
+.cookieConsentContainer .cookieDesc p {
+    margin: 0;
+    padding: 0;
+    font-family: OpenSans, arial, "sans-serif";
+    color: #fff;
+    font-size: 13px;
+    line-height: 20px;
+    display: block;
+    margin-top: 10px;
+} .cookieConsentContainer .cookieDesc a {
+    font-family: OpenSans, arial, "sans-serif";
+    color: #fff;
+    text-decoration: underline;
+}
+.cookieConsentContainer .cookieButton a {
+    display: inline-block;
+    font-family: OpenSans, arial, "sans-serif";
+    color: #990099;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 14px;
+    background: #ffff00;
+    box-sizing: border-box; 
+    padding: 15px 24px;
+    text-align: center;
+    transition: background 0.3s;
+}
+.cookieConsentContainer .cookieButton a:hover { 
+    cursor: pointer;
+    background: #990099;
+    color: #ffffff;
+}
+
+@media (max-width: 980px) {
+    .cookieConsentContainer {
+        bottom: 0px !important;
+        left: 0px !important;
+        width: 100%  !important;
+    }
+}
+/*Cookie Consent End*/
+
+/*design for smaller screen*/
+@media all and (max-width: 900px){/*use media all to cater for IE*/
+    .open{
+        display: block;
+    }
+    .navbar-nav{
+        display: none;
+    }min-width
+    .arrangeBoxes{
+        overflow-y: hidden;
+        padding:20px 0 50px 0;
+    }
+    .leftIndex{
+        width: 100%;
+        padding: 0 0 30px 0;
+    }
+    .centerIndex{
+        width: 100%;
+        padding: 0 0 0 0;
+        margin-left: 0;
+    }
+    .centerIndex ul{
+        padding: 0;
+        margin: 0;;
+        background: #ff6600;
+    }
+    .centerIndex ul li{
+        background-repeat: repeat;
+        padding-left: 0;
+        text-align: center;
+    }
+    .rightIndex{
+        display: inline-block;
+        background-color: #ffffff;
+        height: 300px;
+        margin-left: 0px;
+        margin-right: 0px;
+        width: 200px;
+        float: right;
+        width: 100%;
+        padding: 0 0 0 0;
+    }
+    .ribbon{
+        width: 100%;
+    }
+    .ribbon:before{
+        display: none;
+    }
+
+    .ribbon:after{
+        display: none;
+    }
+    .ribbonLeftIndex{
+        width: 100%;
+    }
+    .ribbonLeftIndex:before{
+        display: none;
+    }
+    .ribbonLeftIndex:after{
+        display: none;
+    }
+    .ribbonCenterIndex{
+        display: none;
+    }
+
+    /*design for contact us form*/
+    .contactUs{
+        display: flex;
+        height: max-content;
+        width: 100%;
+        margin-left: 0px;
+    }
+    .contactUsForm{
+        flex: 1;
+    }
+    .contactUsPnl{
+        width: 100%;
+        padding-right: 10px;
+    }
+    .contactUsForm.contactUsPnl.email{
+        background: #ffffff;
+        width: 100%;
+    }
+    .contactUsForm.contactUsPnl .subject{
+        background: #ffffff;
+        flex: 1;
+        width: 100%;
+    }
+    .contactUsForm .contactUsPnl .message{
+        background: #ffffff;
+        width: 100%;
+    }
+
+    /*end of design for contact us form*/
+
+    body{
+        overflow-x: hidden;
+    }
+
+    #page{
+        margin-left: 0;
+        overflow-x: hidden;
+    }
+    #content{
+        margin-left: 0;
+        width: 100%;
+        overflow-x: hidden;
+    }
+}
