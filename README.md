@@ -1,4 +1,4 @@
-A simple node js application that reads and inserts data to a database
+A simple react application that reads and inserts data to a database
 APIs used
 -express
 -express-handlebars
