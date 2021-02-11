@@ -30,8 +30,8 @@ app.use('/', routes);
 var connection = mysql.createConnection({
   host: "localhost",
   //provide the following three
-  user: "",
-  password: "",
+  user: "root",
+  password: "nbuser",
   database: "salesdb"
 });
 
